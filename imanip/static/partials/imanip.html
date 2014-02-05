@@ -1,0 +1,25 @@
+<div class="container" ng-controller="ImanipController">
+	<form enctype="multipart/form-data">
+		<input class="file-select" type="file" name="file" file-upload>
+
+		<div class="effect" ng-repeat="effect in effects">
+			Adjust: 
+			<select name="manip" ng-model="effect.effect_name">
+				<option value="grayscale">Grayscale</option>
+				<option value="brightness">Brightness</option>
+				<option value="contrast">Contrast</option>
+				<option value="sepia">Sepia</option>
+				<option value="quantize">Quantize</option>
+				<option value="bitify">Bitify</option>
+				<option value="edge_detect">Detect Edges</option>
+			</select>
+			By:
+			<input name="level" type="range"  min="0" max="200" ng-model="effect.value"/>
+			<button class="btn btn-danger" ng-click="remove_effect(effect.$id)">Remove Effect</button>
+		</div>
+		<button class="button btn btn-primary" ng-click="add_effect()">Add Effect</button>
+		<button class="button btn btn-success" ng-click="upload()" type="submit">Submit</button>
+	</form>
+
+	<img class="image" ng-src="{{ image }}">
+</div>
