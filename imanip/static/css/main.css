@@ -8,6 +8,9 @@ header {
 
 .effect {
 	margin: 10px;
+	padding: 5px;
+	background-color: #eee;
+	border-radius: 4px;
 }
 
 .image {

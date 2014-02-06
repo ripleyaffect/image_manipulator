@@ -10,8 +10,8 @@ function ImanipController($scope, $http, $location) {
 		});
 	});
 
-	$scope.add_effect = function() {
-		$scope.effects.push({ effect_name: 'brightness', value: 100 })
+	$scope.add_effect = function(index) {
+		$scope.effects.splice(index, 0, { effect_name: 'brightness', value: 100 })
 	}
 
 	$scope.remove_effect = function(effect_index) {

@@ -19,8 +19,9 @@
 			By:
 			<input name="level" type="range"  min="0" max="200" ng-model="effect.value"/>
 			<button class="btn btn-danger" ng-click="remove_effect($index)">Remove Effect</button>
+			<button class="button btn btn-primary" ng-click="add_effect($index)">Add Effect Before</button>
 		</div>
-		<button class="button btn btn-primary" ng-click="add_effect()">Add Effect</button>
+		<button class="button btn btn-primary" ng-click="add_effect(effects.length-1)">Add Effect</button>
 		<button class="button btn btn-success" ng-click="upload()" type="submit">Submit</button>
 	</form>
 
